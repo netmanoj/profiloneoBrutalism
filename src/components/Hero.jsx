@@ -76,7 +76,7 @@ const Hero = () => {
             <div className="w-3 h-3 bg-yellow-500 rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)]"></div>
             <div className="w-3 h-3 bg-green-500 rounded-full shadow-[2px_2px_0px_rgba(0,0,0,1)]"></div>
           </div>
-          <div className="text-sm text-black font-mono">Portfolio - Manoj Adhikari</div>
+          <div className="text-sm text-black font-mono">My Site</div>
         </div>
 
         <div className="flex items-center p-8">
