@@ -58,15 +58,7 @@ const About = () => {
           that challenge my creativity. I'm always eager to learn new
           technologies and stay updated with industry advancements.
         </motion.p>
-        <motion.p
-          animate={controls}
-          className="text-lg font-mono font-light text-[#1A1A1A]"
-        >
-          I'm committed to leveraging my skills to deliver high-quality
-          solutions and contribute to projects that make a difference. If you're
-          interested in collaborating or just want to chat about tech, feel free
-          to reach out!
-        </motion.p>
+
       </div>
       <div className="text-center mt-10">
         <button
