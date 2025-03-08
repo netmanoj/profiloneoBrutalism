@@ -1,13 +1,61 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Space+Grotesk:wght@400;500;700&display=swap');
+
+:root {
+  --primary: #00BCD4;
+  --secondary: #3ECF8E;
+  --accent: #FF69B4;
+  --highlight: #FFD600;
+  --dark: #333333;
+  --light: #FFFFFF;
+}
 
 *{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
+@layer base {
+  body {
+    @apply bg-white font-brutalist;
+  }
+}
+
+@layer components {
+  .neo-button {
+    @apply bg-white border-2 border-black px-4 py-2 font-bold shadow-brutal 
+           transition-transform hover:-translate-y-0.5 hover:translate-x-0.5 
+           active:translate-x-0 active:translate-y-0 cursor-pointer text-sm;
+  }
+
+  .neo-button:hover {
+    background-color: var(--primary);
+    color: var(--light);
+  }
+
+  .neo-card {
+    @apply bg-white border-2 border-black p-4 shadow-brutal;
+  }
+
+  .neo-input {
+    @apply bg-white border-2 border-black px-3 py-1.5 shadow-brutal
+           focus:outline-none focus:-translate-y-0.5 focus:translate-x-0.5
+           transition-transform text-sm;
+  }
+
+  .neo-input:focus {
+    background-color: var(--primary);
+    color: var(--light);
+  }
+
+  .neo-section {
+    @apply border-2 border-black p-6 my-6 shadow-brutal;
+  }
+}
+
 @keyframes float1 {
   0% { transform: translate(0, 0) rotate(0deg); }
   50% { transform: translate(-30px, 30px) rotate(30deg); }
@@ -59,6 +107,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float1 8s infinite; 
+  @apply border-3 border-black;
 }
 .crystal2 { 
   width: 40px; 
@@ -67,6 +116,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float2 10s infinite; 
+  @apply border-3 border-black;
 }
 .crystal3 { 
   width: 40px; 
@@ -75,6 +125,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float3 12s infinite; 
+  @apply border-3 border-black;
 }
 .crystal4 { 
   width: 40px; 
@@ -83,6 +134,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float4 14s infinite; 
+  @apply border-3 border-black;
 }
 .crystal5 { 
   width: 40px; 
@@ -91,6 +143,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: float5 16s infinite; 
+  @apply border-3 border-black;
 }
 
 .circle1 { 
@@ -100,6 +153,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: rotateCircle 8s linear infinite; 
+  @apply border-3 border-black;
 }
 .circle2 { 
   width: 50px; 
@@ -108,6 +162,7 @@
   border-radius: 50%; 
   box-shadow: 4px 4px 0px rgba(0, 0, 0, 1); /* Solid black shadow */ 
   animation: rotateCircle 10s linear infinite; 
+  @apply border-3 border-black;
 }
 
 .triangle1 {
@@ -117,7 +172,8 @@
   border-right: 20px solid transparent; 
   border-bottom: 40px solid #FF6347; /* Solid color */ 
   transform: rotate(45deg);
-  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+  filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+  @apply border-3 border-black;
 }
 
 .triangle2 {
@@ -127,7 +183,8 @@
   border-right: 20px solid transparent; 
   border-bottom: 40px solid #00CED1; /* Solid color */ 
   transform: rotate(30deg);
-  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+  filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+  @apply border-3 border-black;
 }
 
 .triangle3 {
@@ -137,7 +194,8 @@
   border-right: 20px solid transparent; 
   border-bottom: 40px solid #ADFF2F; /* Solid color */ 
   transform: rotate(-30deg);
-  filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+  filter: drop-shadow(5px 5px 0px rgba(0, 0, 0, 1)); /* Solid black shadow */
+  @apply border-3 border-black;
 }
 
 .crystal1 { top: 15%; left: 25%; }
@@ -184,7 +242,7 @@
 /* Play Music */
 
 .shadow-black-neobrutalist {
-  box-shadow: 10px 10px 0px 0px black; /* Neo-brutalist solid shadow */
+  @apply shadow-brutal-xl;
 }
 
 .pads > .pad {
@@ -197,8 +255,10 @@
   cursor: pointer;
   box-shadow: 10px 10px 0px 0px black; /* Solid black shadow for pads */
   transition: transform 0.1s ease-in-out;
+  @apply border-3 border-black shadow-brutal transition-transform;
 }
 
 .pads > .pad:hover {
   transform: translate(-5px, -5px); /* Slight hover effect to emphasize neo-brutalist feel */
+  @apply -translate-y-1 translate-x-1;
 }

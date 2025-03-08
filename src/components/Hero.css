@@ -1,0 +1,150 @@
+/* Shape Animations */
+@keyframes float1 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-30px, 30px) rotate(30deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float2 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(40px, -20px) rotate(45deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float3 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-50px, -50px) rotate(30deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float4 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(60px, 40px) rotate(20deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes float5 {
+  0% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-40px, 50px) rotate(60deg); }
+  100% { transform: translate(0, 0) rotate(0deg); }
+}
+
+@keyframes vibrate {
+  0% { transform: scale(1); }
+  25% { transform: scale(1.1); }
+  50% { transform: scale(0.9); }
+  75% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes sizeChange {
+  0% { width: 40px; height: 40px; }
+  50% { width: 60px; height: 60px; }
+  100% { width: 40px; height: 40px; }
+}
+
+.hero-shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border: 3px solid black;
+  box-shadow: 5px 5px 0px rgba(0, 0, 0, 1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.hero-shape:hover {
+  transform: scale(1.1);
+}
+
+.crystal1 { 
+  background: #FF6347;
+  border-radius: 50%;
+  animation: float1 8s infinite;
+  top: 15%; 
+  left: 25%;
+}
+
+.crystal2 { 
+  background: #00CED1;
+  border-radius: 50%;
+  animation: float2 10s infinite;
+  bottom: 10%; 
+  right: 20%;
+}
+
+.crystal3 { 
+  background: #ADFF2F;
+  border-radius: 50%;
+  animation: float3 12s infinite;
+  top: 35%; 
+  left: 40%;
+}
+
+.crystal4 { 
+  background: #FF4500;
+  border-radius: 50%;
+  animation: float4 14s infinite;
+  bottom: 20%; 
+  right: 30%;
+}
+
+.crystal5 { 
+  background: #DAA520;
+  border-radius: 50%;
+  animation: float5 16s infinite;
+  top: 50%; 
+  left: 15%;
+}
+
+.circle1 { 
+  width: 50px;
+  height: 50px;
+  background: #8A2BE2;
+  border-radius: 50%;
+  animation: float1 8s infinite;
+  top: 25%; 
+  right: 10%;
+}
+
+.circle2 { 
+  width: 50px;
+  height: 50px;
+  background: #FFD700;
+  border-radius: 50%;
+  animation: float2 10s infinite;
+  bottom: 20%; 
+  left: 25%;
+}
+
+.triangle1 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: #FF6347;
+  animation: float3 12s infinite;
+  top: 60%; 
+  left: 20%;
+}
+
+.triangle2 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: #00CED1;
+  animation: float4 14s infinite;
+  bottom: 30%; 
+  right: 25%;
+}
+
+.triangle3 {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  background: #ADFF2F;
+  animation: float5 16s infinite;
+  top: 70%; 
+  right: 40%;
+}
+
+.vibrate {
+  animation: vibrate 0.5s ease forwards;
+}
+
+.size-change {
+  animation: sizeChange 0.5s ease forwards;
+} 

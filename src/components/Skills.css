@@ -22,3 +22,89 @@
     clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
   }
   
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) rotate(12deg); }
+  50% { transform: translate(-10px, -15px) rotate(15deg); }
+}
+
+@keyframes float-delay {
+  0%, 100% { transform: translate(0, 0) rotate(-12deg); }
+  50% { transform: translate(15px, -10px) rotate(-15deg); }
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(-5deg) scale(1.05); }
+  50% { transform: rotate(0deg) scale(1.1); }
+  75% { transform: rotate(5deg) scale(1.05); }
+}
+
+@keyframes skill-fill {
+  0% { width: 0; }
+  100% { width: 100%; }
+}
+
+/* Generate multiple float animations for shapes */
+@keyframes shape-float-1 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-30px, -20px) rotate(180deg); }
+}
+
+@keyframes shape-float-2 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(25px, -35px) rotate(-180deg); }
+}
+
+@keyframes shape-float-3 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-20px, 30px) rotate(90deg); }
+}
+
+@keyframes shape-float-4 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(35px, 25px) rotate(-90deg); }
+}
+
+@keyframes shape-float-5 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(-15px, -40px) rotate(45deg); }
+}
+
+@keyframes shape-float-6 {
+  0%, 100% { transform: translate(0, 0) rotate(0deg); }
+  50% { transform: translate(40px, -15px) rotate(-45deg); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float-delay 3s ease-in-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out;
+}
+
+.animate-skill-fill {
+  animation: skill-fill 1s ease-out forwards;
+}
+
+/* Apply float animations to shapes */
+.shape-float-1 { animation: shape-float-1 8s ease-in-out infinite; }
+.shape-float-2 { animation: shape-float-2 9s ease-in-out infinite; }
+.shape-float-3 { animation: shape-float-3 10s ease-in-out infinite; }
+.shape-float-4 { animation: shape-float-4 11s ease-in-out infinite; }
+.shape-float-5 { animation: shape-float-5 12s ease-in-out infinite; }
+.shape-float-6 { animation: shape-float-6 13s ease-in-out infinite; }
+
+/* Shape variations */
+.shape-float-1 { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+.shape-float-2 { border-radius: 50%; }
+.shape-float-3 { clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%); }
+.shape-float-4 { clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); }
+.shape-float-5 { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+.shape-float-6 { clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
+  
