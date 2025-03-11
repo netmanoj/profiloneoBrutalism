@@ -19,18 +19,18 @@ const ThemeSwitcher = ({ currentTheme, onThemeChange }) => {
       decorative3: '#FFD600'
     },
     alternate: {
-      primary: '#FF69B4',
-      secondary: '#9C27B0',
+      primary: '#4A90E2',
+      secondary: '#FF7F50',
       accent: '#FFD600',
       background: '/images/back1.png',
-      card1: '#FF69B4',
-      card2: '#9C27B0',
+      card1: '#4A90E2',
+      card2: '#FF7F50',
       card3: '#FFD600',
       text: '#000000',
       textLight: '#FFFFFF',
-      hover: '#FF69B4',
-      decorative1: '#FF69B4',
-      decorative2: '#9C27B0',
+      hover: '#4A90E2',
+      decorative1: '#4A90E2',
+      decorative2: '#FF7F50',
       decorative3: '#FFD600'
     }
   };

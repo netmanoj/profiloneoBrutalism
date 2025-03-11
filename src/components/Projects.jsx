@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ProjectCard from './ProjectCard';
+import Masonry from 'react-masonry-css';
 
 const projects = [
   {
@@ -55,6 +56,13 @@ const projects = [
 const Projects = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
+  // Breakpoint object for responsive columns
+  const breakpointColumnsObj = {
+    default: 3, // 3 columns by default
+    1100: 2,   // 2 columns at 1100px
+    700: 1     // 1 column at 700px
+  };
+
   return (
     <section className="relative w-full py-8 bg-white border-black border-y-2">
       {/* Header */}
@@ -71,13 +79,17 @@ const Projects = () => {
         <div className="absolute bottom-8 right-16 w-12 h-12 bg-neo-purple border-2 border-black shadow-brutal rotate-45"></div>
       </div>
 
-      {/* Projects Grid */}
+      {/* Projects Masonry Grid */}
       <div className="container mx-auto px-3">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8 max-w-5xl mx-auto">
+        <Masonry
+          breakpointCols={breakpointColumnsObj}
+          className="flex w-auto -ml-6"
+          columnClassName="pl-6 bg-clip-padding"
+        >
           {projects.map((project, index) => (
             <div 
               key={index}
-              className="transform transition-all duration-300 mx-auto w-full max-w-sm"
+              className="mb-6 transform transition-all duration-300"
               style={{
                 transform: hoveredIndex === index ? 'scale(1.02)' : 'scale(1)',
                 zIndex: hoveredIndex === index ? 10 : 1
@@ -95,7 +107,7 @@ const Projects = () => {
               />
             </div>
           ))}
-        </div>
+        </Masonry>
       </div>
 
       {/* Bottom decorative shapes */}

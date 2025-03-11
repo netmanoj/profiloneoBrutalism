@@ -4,7 +4,7 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <section className="contact-section bg-neo-blue relative py-8 overflow-hidden">
+    <section className="contact-section bg-[var(--primary)] relative py-8 overflow-hidden">
       {/* Background Animated Shapes - Moved to top and adjusted z-index */}
       <div className="absolute inset-0 pointer-events-none" style={{ zIndex: 0 }}>
         <div className="shape crystal1" style={{ top: '5%', left: '5%', opacity: 0.6 }}></div>
@@ -32,12 +32,12 @@ const Contact = () => {
           <form
             name="contact"
             method="POST"
-            className="neo-card bg-neo-yellow p-6 md:p-8 relative"
+            className="neo-card bg-[var(--secondary)] p-6 md:p-8 relative"
             netlify
           >
             {/* Decorative Elements */}
-            <div className="absolute -top-4 -right-4 w-8 h-8 bg-neo-pink border-2 border-black shadow-brutal rotate-12"></div>
-            <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-neo-blue border-2 border-black shadow-brutal -rotate-12"></div>
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-[var(--decorative1)] border-2 border-black shadow-brutal rotate-12"></div>
+            <div className="absolute -bottom-3 -left-3 w-6 h-6 bg-[var(--decorative2)] border-2 border-black shadow-brutal -rotate-12"></div>
             
             <input type="hidden" name="form-name" value="contact" />
             
@@ -93,7 +93,7 @@ const Contact = () => {
             <div className="mt-6 flex justify-end">
               <button
                 type="submit"
-                className="neo-button bg-neo-pink hover:bg-white text-black font-brutalist text-base group flex items-center gap-1.5 transform hover:translate-x-1 hover:-translate-y-1"
+                className="neo-button bg-[var(--decorative1)] hover:bg-white text-[var(--textLight)] hover:text-black font-brutalist text-base group flex items-center gap-1.5 transform hover:translate-x-1 hover:-translate-y-1"
               >
                 <span>Send Message</span>
                 <FaPaperPlane className="transform group-hover:translate-x-0.5 transition-transform" />
@@ -104,7 +104,7 @@ const Contact = () => {
       </div>
 
       {/* Bottom Border - Kept above shapes */}
-      <div className="absolute bottom-0 left-0 w-full h-4 bg-neo-yellow border-t-2 border-black" style={{ zIndex: 1 }}></div>
+      <div className="absolute bottom-0 left-0 w-full h-4 bg-[var(--decorative3)] border-t-2 border-black" style={{ zIndex: 1 }}></div>
     </section>
   );
 };

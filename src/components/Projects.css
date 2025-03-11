@@ -1,0 +1,53 @@
+/* Masonry grid styles */
+.my-masonry-grid {
+  display: flex;
+  width: auto;
+  margin-left: -16px; /* Adjust the negative margin to match your gap */
+}
+
+.my-masonry-grid_column {
+  padding-left: 16px; /* Adjust this value to match your gap */
+  background-clip: padding-box;
+}
+
+/* Optional: Add animation for items */
+.masonry-item {
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+
+.masonry-item:hover {
+  transform: translateY(-4px);
+}
+
+/* Ensure images maintain aspect ratio */
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1100px) {
+  .my-masonry-grid {
+    margin-left: -12px;
+  }
+  .my-masonry-grid_column {
+    padding-left: 12px;
+  }
+  .masonry-item {
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 700px) {
+  .my-masonry-grid {
+    margin-left: -8px;
+  }
+  .my-masonry-grid_column {
+    padding-left: 8px;
+  }
+  .masonry-item {
+    margin-bottom: 8px;
+  }
+} 

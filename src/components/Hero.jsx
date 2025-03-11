@@ -87,7 +87,7 @@ const Hero = ({ backgroundImage }) => {
             <div className="dynamic-text h-10 bg-white border-2 border-black px-3 py-1.5 shadow-brutal w-full md:w-auto">
               <Typewriter
                 options={{
-                  strings: ["a C Programming Developer_", "a Full Stack Developer_", "a Linux Enthusiast_"],
+                  strings: ["C Developer_", "a Full Stack Developer_", "a Linux Enthusiast_"],
                   autoStart: true,
                   loop: true,
                   delay: 50,
