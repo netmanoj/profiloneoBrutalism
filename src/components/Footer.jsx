@@ -33,7 +33,7 @@ const Footer = () => {
               Made with Code & Creativity
             </h3>
             <p className="font-brutalist text-[var(--textLight)]">
-              © 2024 Manoj Adhikari. All rights reserved.
+              © {new Date().getFullYear()} Manoj Adhikari. All rights reserved.
             </p>
           </div>
 
